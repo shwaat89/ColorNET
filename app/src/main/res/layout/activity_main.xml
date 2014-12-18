@@ -9,8 +9,51 @@
     tools:context=".Activity_Main">
 
     <TextView
-        android:text="@string/hello_world"
+        android:id="@+id/activity_main_title"
+        android:text="Welcome to Color NE-Thing!"
+        android:textSize="22sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Space
+        android:id="@+id/activity_main_space_1"
+        android:layout_width="1dp"
+        android:layout_height="75dp"
+        android:layout_below="@id/activity_main_title" />
+
+    <TextView
+        android:id="@+id/activity_main_fileDialog"
+        android:layout_width="225dp"
+        android:layout_height="35dp"
+        android:layout_alignBottom="@+id/activity_main_browseButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/activity_main_browseButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="Browse"
+        android:layout_toRightOf="@id/activity_main_fileDialog"
+        android:layout_toEndOf="@id/activity_main_fileDialog"
+        android:layout_below="@id/activity_main_space_1"
+        android:onClick="browseAction"/>
+
+    <Space
+        android:id="@+id/activity_main_space_2"
+        android:layout_width="1dp"
+        android:layout_height="75dp"
+        android:layout_below="@id/activity_main_browseButton" />
+
+    <Button
+        android:id="@+id/activity_main_convertButton"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:text="Convert Image"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:layout_below="@id/activity_main_space_2"
+        android:onClick="convertAction"/>
 
 </RelativeLayout>
